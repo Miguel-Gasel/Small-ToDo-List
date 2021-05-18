@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do list</title>
+    <!-- JS al final del body -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <h1>Jquery To Do List</h1>
+        <div class="cajetin">
+           <input type="text" class="userinput" placeholder="Escribe aquí tu tarea"> 
+           <img class="sendinput" src="./assets/arrow-circle-down-solid.svg" alt="">
+        </div>
+        
+
+        <div class="tarjetas">
+             <div class="container todo">
+                 <div class="titulo">
+                     <h2>Por hacer</h2>
+                    <img src="./assets/clipboard-list-solid.svg" alt="">
+                 </div>
+           <div class="porHacer">
+                    <!-- <div class="tarea">
+                        <div class="tareaporhacer"> Ejemplo Nombre de la tarea</div>
+
+                        <div class="iconosporhacer">
+                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check-circle" class="svgtodo" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg>
+                            <div class="iconosbasura">
+                                <svg class="basura" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="trash" class="svg-inline--fa fa-trash fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="white" d="M432 32H312l-9.4-18.7A24 24 0 0 0 281.1 0H166.8a23.72 23.72 0 0 0-21.4 13.3L136 32H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16zM53.2 467a48 48 0 0 0 47.9 45h245.8a48 48 0 0 0 47.9-45L416 128H32z"></path></svg>
+
+                            <svg class="opentrash" id="a2636ab8-4750-45e6-9e1d-7362ac7157c1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" width="25px" height="25px" viewBox="0 0 413.7847 560.5923"><defs><style>.b44389e2-c017-4315-a2b7-71de0f58c691{fill:rgb(255, 53, 2);}</style></defs><path class="b44389e2-c017-4315-a2b7-71de0f58c691" d="M432.2,112.1,323.9,81.2l-3.7-19.3a22.539,22.539,0,0,0-16-17.5L201.1,14.9a22.2281,22.2281,0,0,0-22.7,6.5L165,35.9,56.7,5A15.0074,15.0074,0,0,0,38.1,15.3L29.9,44.2A15.0074,15.0074,0,0,0,40.2,62.8L415.7,169.9a15.0074,15.0074,0,0,0,18.6-10.3l8.2-28.9A15.0074,15.0074,0,0,0,432.2,112.1ZM57.8,520a48.0328,48.0328,0,0,0,47.9,45H351.5a48.0328,48.0328,0,0,0,47.9-45l21.2-339H36.6Z" transform="translate(-29.3077 -4.4077)"/></svg>
+                            </div>
+                            
+                        </div>
+     
+                       
+                    </div> -->
+                    
+                 </div> 
+                                  
+            </div>
+             <div class="container done">
+                    <div class="titulo">
+                        <h2>Completadas</h2>
+                        <img src="./assets/clipboard-check-solid.svg" alt="">
+                        
+                    </div>
+                     <div class="contenedorTareasDone">
+                        <!-- <div class="cajadone">
+                         <div class="tareahecha">Ejemplo Nombre de la tarea</div>
+
+                        <div class="iconos">
+                            <svg class="basura" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="trash" class="svg-inline--fa fa-trash fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="white" d="M432 32H312l-9.4-18.7A24 24 0 0 0 281.1 0H166.8a23.72 23.72 0 0 0-21.4 13.3L136 32H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16zM53.2 467a48 48 0 0 0 47.9 45h245.8a48 48 0 0 0 47.9-45L416 128H32z"></path></svg>
+
+                            <svg class="opentrash" id="a2636ab8-4750-45e6-9e1d-7362ac7157c1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" width="25px" height="25px" viewBox="0 0 413.7847 560.5923"><defs><style>.b44389e2-c017-4315-a2b7-71de0f58c691{fill:rgb(255, 53, 2);}</style></defs><path class="b44389e2-c017-4315-a2b7-71de0f58c691" d="M432.2,112.1,323.9,81.2l-3.7-19.3a22.539,22.539,0,0,0-16-17.5L201.1,14.9a22.2281,22.2281,0,0,0-22.7,6.5L165,35.9,56.7,5A15.0074,15.0074,0,0,0,38.1,15.3L29.9,44.2A15.0074,15.0074,0,0,0,40.2,62.8L415.7,169.9a15.0074,15.0074,0,0,0,18.6-10.3l8.2-28.9A15.0074,15.0074,0,0,0,432.2,112.1ZM57.8,520a48.0328,48.0328,0,0,0,47.9,45H351.5a48.0328,48.0328,0,0,0,47.9-45l21.2-339H36.6Z" transform="translate(-29.3077 -4.4077)"/></svg>
+
+                        </div>
+
+                        </div>  -->
+                    </div>
+                    
+            </div>
+        </div>
+        
+    </main>
+    
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="./js/app.js"></script>
+</body>

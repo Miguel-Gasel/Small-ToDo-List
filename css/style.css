@@ -1,0 +1,171 @@
+@charset "UTF-8";
+body {
+  font-family: "Ubuntu", sans-serif;
+  width: 100%;
+  overflow: hidden;
+  background: #ffd89b;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #19547b, #ffd89b);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  display: flex;
+  flex-flow: column wrap;
+  width: 85%;
+  margin: 0 auto;
+}
+main h1 {
+  color: white;
+  text-align: center;
+}
+main .cajetin {
+  width: 400px;
+  margin: 0 auto;
+  position: relative;
+}
+main .cajetin .userinput {
+  width: 320px;
+  margin: 0 auto;
+  border-radius: 1em;
+  padding: 1em 2em;
+}
+main .cajetin .sendinput {
+  width: 20px;
+  position: absolute;
+  right: 10%;
+  top: 30%;
+  cursor: pointer;
+  filter: grayscale(50%);
+  transition: all 0.2s ease;
+}
+main .cajetin .sendinput:hover {
+  filter: grayscale(0%);
+  transform: scale(1.2);
+}
+main .tarjetas {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 95%;
+}
+main .tarjetas .container {
+  margin: 1.5em 0.5em;
+  width: 45%;
+  border-radius: 1em;
+  padding: 1em;
+  box-shadow: rgba(0, 0, 0, 0.274) 5px 5px 5px;
+}
+main .tarjetas .container .titulo {
+  display: flex;
+  flex-flow: row;
+  /* text-decoration: underline; */
+}
+main .tarjetas .container .titulo img {
+  width: 20px;
+  padding: 0.5em;
+}
+main .tarjetas .container .titulo h2 {
+  margin-right: 0.5em;
+}
+main .tarjetas .todo {
+  background-color: #fcdeae;
+}
+main .tarjetas .todo .tarea {
+  height: 30px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5em 0.5em 0.5em 0.5em;
+  border: 1px black solid;
+  border-radius: 1em;
+  margin-bottom: 1em;
+}
+main .tarjetas .todo .tarea:hover {
+  background-color: #ffd993;
+}
+main .tarjetas .todo .tarea .iconosporhacer {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+main .tarjetas .todo .tarea .iconosporhacer .basura {
+  width: 20px;
+}
+main .tarjetas .todo .tarea .iconosporhacer .iconosbasura:hover .basura {
+  display: none;
+  transition: all 0.3s ease;
+}
+main .tarjetas .todo .tarea .iconosporhacer .iconosbasura .opentrash {
+  width: 18.9px;
+  height: 25px;
+  display: none;
+  cursor: pointer;
+  margin-left: 0.1em;
+  z-index: 3;
+}
+main .tarjetas .todo .tarea .iconosporhacer .iconosbasura:hover .opentrash {
+  display: flex;
+  transition: all 0.2s ease;
+}
+main .tarjetas .todo .tarea .iconosporhacer .svgtodo {
+  width: 25px;
+  margin-right: 0.4em;
+  cursor: pointer;
+  /* Con los SVG si el fill está dentro de una etiqueta <path> hay que meter el path en el hover */
+}
+main .tarjetas .todo .tarea .iconosporhacer .svgtodo:hover path {
+  transition: all 0.2s ease;
+  fill: #13a513;
+  cursor: pointer;
+}
+main .tarjetas .done {
+  background-color: #3a4f5e;
+  color: white;
+}
+main .tarjetas .done .contenedorTareasDone .cajadone {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5em 0.5em 0.5em 0.5em;
+  border: 1px white solid;
+  border-radius: 1em;
+  margin-bottom: 1em;
+  height: 30px;
+}
+main .tarjetas .done .contenedorTareasDone .cajadone:hover {
+  background-color: #2c3841;
+}
+main .tarjetas .done .contenedorTareasDone .cajadone .tareahecha {
+  text-decoration: line-through;
+}
+main .tarjetas .done .contenedorTareasDone .cajadone .iconos {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+main .tarjetas .done .contenedorTareasDone .cajadone .iconos .basura {
+  width: 20px;
+}
+main .tarjetas .done .contenedorTareasDone .cajadone .iconos:hover .basura {
+  display: none;
+  transition: all 0.3s ease;
+}
+main .tarjetas .done .contenedorTareasDone .cajadone .iconos .opentrash {
+  width: 18.9px;
+  height: 25px;
+  display: none;
+  cursor: pointer;
+}
+main .tarjetas .done .contenedorTareasDone .cajadone .iconos:hover .opentrash {
+  display: flex;
+  transition: all 0.2s ease;
+}

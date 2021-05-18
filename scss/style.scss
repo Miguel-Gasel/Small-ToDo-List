@@ -1,0 +1,198 @@
+body {
+    font-family: 'Ubuntu', sans-serif;
+    width: 100%;
+    
+    overflow: hidden;
+    background: #ffd89b;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #19547b, #ffd89b);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #19547b, #ffd89b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    display: flex;
+    flex-flow: column wrap;
+    width: 85%;
+    margin: 0 auto;
+    
+
+    h1 {
+        color: white;
+        text-align: center;
+    }
+    .cajetin {
+        width: 400px;
+        margin: 0 auto;
+        position: relative;
+        .userinput {
+            width: 320px;
+            margin: 0 auto;
+            border-radius: 1em;
+            padding: 1em 2em;
+        }
+        .sendinput {
+            width: 20px;
+            position: absolute;
+            right: 10%;
+            top: 30%;
+            cursor: pointer;
+            filter: grayscale(50%);
+            transition: all .2s ease;
+
+            &:hover{
+                filter: grayscale(0%);
+                transform: scale(1.2);
+            }
+        }
+    }
+   
+    .tarjetas {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        margin: 0 auto;
+        width: 95%;
+        
+
+        .container {
+            margin: 1.5em .5em;
+            width: 45%;
+            border-radius: 1em;
+            padding: 1em;
+            box-shadow: rgba(0, 0, 0, 0.274) 5px 5px 5px;
+
+            .titulo {
+                display: flex;
+                flex-flow: row;
+                
+               img {
+                width: 20px;
+                padding: .5em;
+                }
+
+                h2 {
+                 margin-right: .5em;
+                }
+            /* text-decoration: underline; */
+            }
+        }
+        .todo{
+            background-color: #fcdeae;
+
+            .tarea {
+                height: 30px;
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: space-between;
+                align-items: center;
+                padding: .5em .5em .5em .5em;
+                border: 1px black solid;
+                border-radius: 1em;
+                margin-bottom: 1em;
+
+                &:hover {
+                    background-color: rgb(255, 217, 147);
+                }
+
+                .iconosporhacer {
+                    display: flex;
+                    flex-flow: row nowrap;
+                    justify-content: center;
+                    align-items: center;
+                    transition: all .3s ease;
+                    cursor: pointer;
+                    .basura {
+                    width: 20px; 
+                    }
+                    .iconosbasura {
+                        &:hover .basura {
+                        display: none;
+                        transition: all .3s ease;
+                     }
+                    .opentrash {
+                        width: 18.9px;
+                        height: 25px;
+                        display: none;
+                        cursor: pointer;
+                        margin-left: .1em;
+                        z-index: 3;
+                    }
+                    &:hover .opentrash {
+                        display: flex;
+                        transition: all .2s ease;
+                        
+                        }
+                    }
+                   
+                    .svgtodo {
+                        width: 25px;
+                        margin-right: .4em;
+                        cursor: pointer;
+                        /* Con los SVG si el fill está dentro de una etiqueta <path> hay que meter el path en el hover */
+                        &:hover path{
+                            transition: all .2s ease;
+                            fill: rgb(19, 165, 19);
+                            cursor: pointer;
+                        }
+                    }
+                    
+                }
+
+            }  
+        }
+        .done{
+            background-color: #3a4f5e;
+            color: white;
+           
+            .contenedorTareasDone {
+                 .cajadone {
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: space-between;
+                align-items: center;
+                padding: .5em .5em .5em .5em;
+                border: 1px white solid;
+                border-radius: 1em;
+                margin-bottom: 1em;
+                height: 30px;
+
+                &:hover {
+                    background-color: #2c3841;
+                }
+
+               .tareahecha {
+                text-decoration: line-through;
+                } 
+
+                .iconos {
+                    transition: all .3s ease;
+                    cursor: pointer;
+                    .basura {
+                    width: 20px; 
+                    }
+                    &:hover .basura {
+                        display: none;
+                        transition: all .3s ease;
+                    }
+                    .opentrash {
+                    width: 18.9px;
+                    height: 25px;
+                    display: none;
+                    cursor: pointer;
+                    }
+                    &:hover .opentrash {
+                        display: flex;
+                        transition: all .2s ease;
+                        
+                    }
+                }
+
+            }
+            }
+           
+
+        }
+    }
+}
+
